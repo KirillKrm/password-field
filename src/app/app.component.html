@@ -1,1 +1,46 @@
-<main></main>
+<main class="main">
+  <div class="main__password">
+    <label class="password__label">Password:</label>
+    <input
+      type="password"
+      class="password__input"
+      [(ngModel)]="password"
+      (input)="checkPasswordStrength()"
+    />
+    <div class="password__strength-indicator">
+      <div
+        class="strength-indicator__box {{
+          passwordStrength === 'short'
+            ? 'easy'
+            : passwordStrength === 'easy'
+            ? 'easy'
+            : passwordStrength === 'medium'
+            ? 'medium'
+            : passwordStrength === 'strong'
+            ? 'strong'
+            : 'empty'
+        }}"
+      ></div>
+      <div
+        class="strength-indicator__box {{
+          passwordStrength === 'short'
+            ? 'easy'
+            : passwordStrength === 'medium'
+            ? 'medium'
+            : passwordStrength === 'strong'
+            ? 'strong'
+            : 'empty'
+        }}"
+      ></div>
+      <div
+        class="strength-indicator__box {{
+          passwordStrength === 'short'
+            ? 'easy'
+            : passwordStrength === 'strong'
+            ? 'strong'
+            : 'empty'
+        }}"
+      ></div>
+    </div>
+  </div>
+</main>

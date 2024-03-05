@@ -1,0 +1,38 @@
+.main {
+  @apply flex h-full w-full justify-center items-center;
+}
+
+.main__password {
+  @apply flex flex-col gap-1;
+}
+
+.password__label {
+}
+
+.password__input {
+  @apply border border-black;
+}
+
+.password__strength-indicator {
+  @apply flex gap-1;
+}
+
+.strength-indicator__box {
+  @apply w-full h-4 bg-gray-300;
+}
+
+.empty {
+  @apply bg-gray-300;
+}
+
+.easy {
+  @apply bg-red-500;
+}
+
+.medium {
+  @apply bg-yellow-500;
+}
+
+.strong {
+  @apply bg-green-500;
+}
