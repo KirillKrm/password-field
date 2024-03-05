@@ -12,6 +12,7 @@ import { RouterOutlet } from '@angular/router';
 export class AppComponent {
   password: string = '';
   passwordStrength: string = '';
+  isShow: boolean = false;
 
   checkPasswordStrength() {
     if (this.password.length === 0) {
@@ -38,5 +39,9 @@ export class AppComponent {
     } else {
       this.passwordStrength = 'easy';
     }
+  }
+
+  toggleVisibility() {
+    this.isShow = !this.isShow;
   }
 }

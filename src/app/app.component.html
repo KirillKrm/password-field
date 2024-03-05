@@ -1,12 +1,19 @@
 <main class="main">
   <div class="main__password">
-    <label class="password__label">Password:</label>
-    <input
-      type="password"
-      class="password__input"
-      [(ngModel)]="password"
-      (input)="checkPasswordStrength()"
-    />
+    <label>Password:</label>
+    <div class="password__field">
+      <input
+        [type]="isShow ? 'text' : 'password'"
+        class="field__input"
+        [(ngModel)]="password"
+        (input)="checkPasswordStrength()"
+      />
+      <img
+        [src]="isShow ? 'assets/eye.svg' : 'assets/eye-slash.svg'"
+        class="field__icon"
+        (click)="toggleVisibility()"
+      />
+    </div>
     <div class="password__strength-indicator">
       <div
         class="strength-indicator__box {{

@@ -6,11 +6,16 @@
   @apply flex flex-col gap-1;
 }
 
-.password__label {
+.password__field {
+  @apply flex relative;
 }
 
-.password__input {
-  @apply border border-black;
+.field__input {
+  @apply h-6 pr-7 border border-black;
+}
+
+.field__icon {
+  @apply flex absolute mr-1 right-0 self-center cursor-pointer;
 }
 
 .password__strength-indicator {
@@ -18,7 +23,7 @@
 }
 
 .strength-indicator__box {
-  @apply w-full h-4 bg-gray-300;
+  @apply w-full h-3 bg-gray-300;
 }
 
 .empty {
